@@ -114,7 +114,7 @@ public class ProductDAO {
 	
 
 	//updates the products buyPrice
-	public void updateProductPrice(Double productIdToBeUpdated, Double productToBeUpdated) throws Exception,IllegalAccessException
+	public void updateProductPrice(String productIdToBeUpdated, Double productPriceToBeUpdated) throws Exception,IllegalAccessException
     {     
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
@@ -128,7 +128,7 @@ public class ProductDAO {
                      + " WHERE productCode = ? ";
     			if(rs.next()){
     				PreparedStatement ps = con.prepareStatement(updateQuery);
-    				ps.setDouble(1, productToBeUpdated);
+    				ps.setDouble(1, productPriceToBeUpdated);
     	            ps.setString(2, productIdToBeUpdated);
     	           
     	            ps.executeUpdate();
