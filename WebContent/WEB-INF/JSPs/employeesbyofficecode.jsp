@@ -4,9 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Employee details by Code</title>
 </head>
 <body>
-
+<h2>Here are the Employee details By Code:</h2>
+<table>
+<tr>
+		<th>Employee Number</th>
+		<th>First Name</th>
+		<th>Last Name</th>	
+	</tr>
+	
+	
+    <c:forEach items="${employeeInfo}" var="employeeModel">
+        <tr>
+            <td><c:out value="${employeeModel.getEmployeeNumber()}" /></td>
+             <td><c:out value="${employeeModel.getFirstName()}" /></td>
+              <td><c:out value="${employeeModel.getLastName()}" /></td>
+           
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>
