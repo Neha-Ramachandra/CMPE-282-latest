@@ -29,8 +29,8 @@
               <td><c:out value="${officeModel.getAddressLine1()}" /></td>
                <td><c:out value="${officeModel.getState()}" /></td>
                <td><c:out value="${officeModel.getCountry()}" /></td>
-			   <td><c:out value="${officeModel.getPostalCode()}" /></td>
-			   <td><c:out value="${officeModel.getTerritory()}" /></td>
+	        <td><c:out value="${officeModel.getPostalCode()}" /></td>
+		<td><c:out value="${officeModel.getTerritory()}" /></td>
         </tr>
     </c:forEach>
 </table>
