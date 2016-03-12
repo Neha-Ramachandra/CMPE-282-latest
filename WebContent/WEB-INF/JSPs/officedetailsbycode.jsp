@@ -4,9 +4,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+
+<title>Office details</title>
 </head>
 <body>
-
+<h2>Here are the Office details:</h2>
+<table>
+<tr>
+		<th>City</th>
+		<th>State</th>
+		<th>Country</th>
+		<th>Address</th>
+		<th>Territory</th>
+		<th>Office Phone</th>
+		<th>Office Postal Code</th>
+	</tr>
+	
+	
+    <c:forEach items="${orderInfo}" var="orderModel">
+        <tr>
+            <td><c:out value="${officeModel.getCity()}" /></td>
+             <td><c:out value="${officeModel.getState()}" /></td>
+              <td><c:out value="${officeModel.getCountry()}" /></td>
+               <td><c:out value="${officeModel.getAddressLine1()}" /></td>
+                <td><c:out value="${officeModel.getTerritory()}" /></td>
+        		 <td><c:out value="${officeModel.getPhone()}" /></td>
+        		  <td><c:out value="${officeModel.getPostalCode()}" /></td>
+               
+           
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>
