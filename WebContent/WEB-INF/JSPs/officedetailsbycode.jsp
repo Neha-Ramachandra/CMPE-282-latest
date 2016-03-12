@@ -21,7 +21,7 @@
 	</tr>
 	
 	
-    <c:forEach items="${orderInfo}" var="orderModel">
+    <c:forEach items="${officeInfo}" var="officeModel">
         <tr>
             <td><c:out value="${officeModel.getCity()}" /></td>
              <td><c:out value="${officeModel.getState()}" /></td>
